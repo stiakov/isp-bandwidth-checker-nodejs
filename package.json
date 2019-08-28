@@ -4,7 +4,8 @@
   "description": "It's a Bandwidth checker built with nodeJS and speedtest-cli, the proposal is to periodically test the isp service",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon index.js",
+    "daemon": "pm2 start index.js --name bwChecker"
   },
   "repository": {
     "type": "git",
