@@ -50,5 +50,5 @@ Please help me tracking any issue that could appear, feel free to fork and send 
 ---
 
 ### Credits
-This project was inspired by [@healycodes](https://github.com/healeycodes) and his recent work made with Python. It was recently published on [Dev.to](https://dev.to/healeycodes/i-built-a-bot-to-try-and-get-money-back-from-my-internet-provider-33ip).
+This project was inspired by [@healycodes](https://github.com/healeycodes) and his recent work. It was recently published on [Dev.to](https://dev.to/healeycodes/i-built-a-bot-to-try-and-get-money-back-from-my-internet-provider-33ip).
 
