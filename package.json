@@ -1,0 +1,33 @@
+{
+  "name": "bandwidth_checker",
+  "version": "1.0.0",
+  "description": "It's a Bandwidth checker built with nodeJS and speedtest-cli, the proposal is to periodically test the isp service",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stiakov/isp-bandwidth-checker-nodejs.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "bandwidth",
+    "isp",
+    "speedtest",
+    "cli",
+    "daemon",
+    "internet",
+    "speed"
+  ],
+  "author": "Santiago Torres G",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stiakov/isp-bandwidth-checker-nodejs/issues"
+  },
+  "homepage": "https://github.com/stiakov/isp-bandwidth-checker-nodejs#readme",
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  }
+}
