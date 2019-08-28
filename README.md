@@ -46,6 +46,7 @@ Please help me tracking any issue that could appear, feel free to fork and send 
 ## To do
 - [ ] Implement a GUI to visualize and explore the data collected.
 - [ ] Deploy on my own server and make it accesible from the web.
+- [ ] Implement a telegram bot to notify relevant changes in data.
 ---
 
 ### Credits
