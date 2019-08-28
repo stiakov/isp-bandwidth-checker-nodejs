@@ -1,5 +1,5 @@
 # Bandwidth Checker and Logger
-It's a bandwidth monitor built upon JS instructions,  it's intended to run periodically and saves the results in a json file.
+It's a bandwidth monitor daemon built upon JS instructions, it's intended to run periodically and saves the results in a json file.
 
 It makes use of:
 - **lowdb** as a lite db in json format.
