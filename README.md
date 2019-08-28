@@ -21,3 +21,33 @@ If you work with multiple projects and different development environments, I end
 - Install **[PM2]()** globally: `npm install -g pm2`
 
 - Install **[LowDB](https://github.com/typicode/lowdb)**: Run `npm install` from the terminal, it makes use of the *package.json* in the source directory or if you prefer, follow the instructions from the provided link.
+
+---
+
+## Settings
+The *settings.js* module is offered to customize the arguments passed in the *index.js* functions, so you should customize the module to fits it to your needs.
+
+---
+
+## Execution
+Check that your system accomplish the requirements and everything works perfectly.
+There are two ways to run this script as a daemon.
+
+From the console:
+- If you are in the source path, run: `npm run daemon`
+- From anywhere, replace the path and run: `pm2 start your/path/to/index.js`
+
+---
+
+## Issues
+Please help me tracking any issue that could appear, feel free to fork and send a pull request, comment, review, or report an issue on this repo.
+
+---
+## To do
+- [ ] Implement a GUI to visualize and explore the data collected.
+- [ ] Deploy on my own server and make it accesible from the web.
+---
+
+### Credits
+This project was inspired by [@healycodes](https://github.com/healeycodes) and his recent work made with Python. It was recently published on [Dev.to](https://dev.to/healeycodes/i-built-a-bot-to-try-and-get-money-back-from-my-internet-provider-33ip).
+
