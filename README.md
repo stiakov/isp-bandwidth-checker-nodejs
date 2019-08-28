@@ -18,7 +18,7 @@ If you work with multiple projects and different development environments, I end
 ---
 ## Installation
 - Install **[SpeedTest-cli](https://github.com/sivel/speedtest-cli)**: `pip install speedtest-cli`
-- Install **[PM2]()** globally: `npm install -g pm2`
+- Install **[PM2](http://pm2.keymetrics.io/)** globally: `npm install -g pm2`
 
 - Install **[LowDB](https://github.com/typicode/lowdb)**: Run `npm install` from the terminal, it makes use of the *package.json* in the source directory or if you prefer, follow the instructions from the provided link.
 
