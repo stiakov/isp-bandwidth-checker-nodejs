@@ -8,8 +8,7 @@ const settings = {
   get_time: () => {
     const lang = 'es-CO';
     const timezone = { timezone: 'America/Bogota' };
-    const datetime = new Date().toLocaleString(lang, timezone);
-    return datetime
+    return new Date().toLocaleString(lang, timezone);
   },
 
   asset: (result, date_time, finish_time) => {
