@@ -17,25 +17,7 @@ const check_bandwidth = (random_timer = (Math.round(Math.random() * 11) + 1) * 6
     const finish_time = new Date().toLocaleString(set.lang, set.timezone);
     
     db.get('registers')
-    .push({
-      download: result['download'] / 1048576,
-      upload: result['upload'] / 1048576,
-      server: {
-        url: result['server']['url'],
-        name: result['server']['name'],
-        country: result['server']['country'],
-        latency: result['server']['latency']
-      },
-      timestamp: result['timestamp'],
-      client: {
-        ip: result['client']['ip'],
-        isp: result['client']['isp'],
-        isprating: result['client']['isprating']
-      },
-      local_date: date_time.split(', ')[0],
-      local_time: date_time.split(', ')[1],
-      finish_time: finish_time.split(', ')[1]
-    }).write();
+    .push(set.asset(result, date_time, finish_time)).write();
     
     db.update('count', n => n + 1).write();
     
@@ -47,5 +29,6 @@ try {
   setInterval(check_bandwidth, 24 * 60000);
   
 } catch (error) {
+  execSync('echo $(date) >> error.log', set.encoding);
   execSync('echo $error >> error.log', set.encoding);
 }
