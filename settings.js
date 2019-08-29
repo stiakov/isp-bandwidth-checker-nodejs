@@ -1,11 +1,17 @@
 const settings = {
   db_name: 'db.json',
-  lang: 'es-CO',
-  timezone: { timezone: 'America/Bogota' },
   encoding: { encoding: 'utf-8' },
   speedtest_json: 'speedtest-cli --json',
   speedtest_csv: 'speedtest-cli --csv',
   speedtest_simple: 'speedtest-cli --simple',
+
+  get_time: () => {
+    const lang = 'es-CO';
+    const timezone = { timezone: 'America/Bogota' };
+    const datetime = new Date().toLocaleString(lang, timezone);
+    return datetime
+  },
+
   asset: (result, date_time, finish_time) => {
     return {
       download: result['download'] / 1048576,
