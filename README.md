@@ -1,6 +1,6 @@
 # Bandwidth Checker Daemon
 
-It's a bandwidth monitor daemon built upon JS instructions, it's intended to run periodically and saves the results in a json file.
+It's a bandwidth monitor daemon built upon JS instructions, it's intended to run periodically and save the results in a json file.
 
 It makes use of:
 
