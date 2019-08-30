@@ -1,8 +1,8 @@
 const settings = {
-  db_name: 'db.json',
+  db_name: 'db/my_db.json',
   lang: 'es-CO',
-  timezone: { timezone: 'America/Bogota' },
-  encoding: { encoding: 'utf-8' },
+  timezone: {timezone: 'America/Bogota'},
+  encoding: {encoding: 'utf-8'},
 
   speedtest: {
     json: 'speedtest-cli --json',
@@ -11,20 +11,21 @@ const settings = {
   },
 
   bot: {
-    token: 'USE:YOUR:OWN:BOT:TOKEN',
-    id_receptor: 446364123,   // SET YOUR OWN ID
+    token: '708473151:AAHcUCE3dE2cm22ZSarAActM9DJY8RKi6nI',
+    id_receptor: 446364123,    // SET YOUR OWN ID
   },
 
-  time: {                     // Expressed in minutes
-    allow_random: true,       // If it's false, random_margin will be zero by default
-    interval: 27,
-    random_margin: 4,
+  timer: {                     // Expressed in minutes
+    allow_random: true,        // If it's false, random_margin will be zero by default
+    interval: 30,
+    random_margin: 2,
+    random_generator: (value) => {
+      return Math.ceil(Math.random() * value) * 60000;
+    }
   },
 
   get_time: () => {
-    const lang = 'es-CO';
-    const timezone = { timezone: 'America/Bogota' };
-    return new Date().toLocaleString(lang, timezone);
+    return new Date().toLocaleString(this.lang, this.timezone);
   },
 
   asset: (result, date_time, finish_time) => {
@@ -47,7 +48,13 @@ const settings = {
       local_time: date_time.split(', ')[1],
       finish_time: finish_time.split(', ')[1]
     };
-  }
-}
+  },
+  daemon_str: `
+
+|)/\\[-|\\/|()|\\| |_\\~ /\\(~|~|\\/[- 
+-> https://github.com/stiakov <-
+
+`
+};
 
 module.exports = settings;
