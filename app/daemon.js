@@ -51,7 +51,7 @@ const start = () => {
     console.log(set.daemon_str);
     const time_interval = set.timer.random_generator(set.timer.interval);
     check_bandwidth(true);
-    setInterval(check_bandwidth(false), time_interval);
+    setInterval(check_bandwidth, time_interval);
 
   } catch (error) {
     cli.log_errors(error);
