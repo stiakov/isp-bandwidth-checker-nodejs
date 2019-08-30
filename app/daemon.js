@@ -19,27 +19,20 @@ const check_ip = () => {
 };
 
 const check_bandwidth = (init_boot = false) => {
-  let rand_timeout = set.timer.random_margin;
+  let rand_timeout = init_boot ? 0 : set.timer.random_margin;
 
-  if (init_boot) rand_timeout = 0;
-
-  if (set.timer.allow_random && rand_timeout !== 0) {
-    rand_timeout = set.timer.random_generator(rand_timeout);
-  }
-
-  if (!set.timer.allow_random) rand_timeout = 0;
+  rand_timeout = set.timer.allow_random && !init_boot ? set.timer.random_generator(rand_timeout) : 0;
 
   setTimeout(() => {
     // COMMENT THE BELOW COMMANDS FOR TESTING PURPOSES
     const date_time = set.get_time();
-    const stdout = cli.run(set.speedtest.json);
-    const result = JSON.parse(stdout);
+    const result = JSON.parse(cli.run(set.speedtest.json));
     const finish_time = set.get_time();
     db.push(set.asset(result, date_time, finish_time));
 
     // TESTING COMMANDS
     // const stdout = cli.run('echo $(date)');
-    // bot.send_news(stdout);
+    // bot.send_news(date_time);
     check_ip();
 
   }, rand_timeout);

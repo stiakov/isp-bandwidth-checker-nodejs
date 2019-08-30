@@ -17,8 +17,8 @@ const settings = {
 
   timer: {                     // Expressed in minutes
     allow_random: true,        // If it's false, random_margin will be zero by default
-    interval: 30,
-    random_margin: 2,
+    interval: 8,
+    random_margin: 4,
     random_generator: (value) => {
       return Math.ceil(Math.random() * value) * 60000;
     }

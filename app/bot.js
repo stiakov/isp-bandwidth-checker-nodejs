@@ -1,6 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const cli = require('./command_line');
 const set = require('./settings');
+const db = require('./db_init');
 
 const my_bot = new TelegramBot(set.bot.token, {polling: true});
 
