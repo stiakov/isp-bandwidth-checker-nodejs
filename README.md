@@ -4,7 +4,7 @@ It's a bandwidth monitor daemon built upon JS instructions, it's intended to run
 
 It makes use of:
 
-* **lowdb** as a lite db in json format.
+* **lowdb** as a lite db_init in json format.
 * **speedtest-cli** to run the speed tests from the command line.
 * **pm2** process manager to run this script as a daemon system.
 
@@ -55,8 +55,8 @@ Please help me tracking any issue that could appear, feel free to fork and send 
 ## To do
 
 * [ ] Implement a GUI to visualize and explore the data collected.
-* [ ] Deploy on my own server and make it accesible from the web.
-* [ ] Implement a telegram bot to notify relevant changes in data.
+* [ ] Deploy on my own server and make it accessible from the web.
+* [X] Implement a telegram bot to notify relevant changes in data.
 
 ---
 
