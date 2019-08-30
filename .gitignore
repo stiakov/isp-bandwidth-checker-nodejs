@@ -1,3 +1,5 @@
 node_modules
 db.json
 error.log
+package-lock.json
+/app/settings_copy.js

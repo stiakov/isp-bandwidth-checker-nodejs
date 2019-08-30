@@ -1,9 +1,25 @@
 const settings = {
   db_name: 'db.json',
+  lang: 'es-CO',
+  timezone: { timezone: 'America/Bogota' },
   encoding: { encoding: 'utf-8' },
-  speedtest_json: 'speedtest-cli --json',
-  speedtest_csv: 'speedtest-cli --csv',
-  speedtest_simple: 'speedtest-cli --simple',
+
+  speedtest: {
+    json: 'speedtest-cli --json',
+    csv: 'speedtest-cli --csv',
+    simple: 'speedtest-cli --simple',
+  },
+
+  bot: {
+    token: 'USE:YOUR:OWN:BOT:TOKEN',
+    id_receptor: 446364123,   // SET YOUR OWN ID
+  },
+
+  time: {                     // Expressed in minutes
+    allow_random: true,       // If it's false, random_margin will be zero by default
+    interval: 27,
+    random_margin: 4,
+  },
 
   get_time: () => {
     const lang = 'es-CO';

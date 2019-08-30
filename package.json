@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/stiakov/isp-bandwidth-checker-nodejs#readme",
   "dependencies": {
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "node-telegram-bot-api": "^0.30.0"
   }
 }
