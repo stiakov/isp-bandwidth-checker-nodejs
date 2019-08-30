@@ -11,8 +11,8 @@ const settings = {
   },
 
   bot: {
-    token: '708473151:AAHcUCE3dE2cm22ZSarAActM9DJY8RKi6nI',
-    id_receptor: 446364123,    // SET YOUR OWN ID
+    token: 'USE:YOUR:OWN:BOT:TOKEN',
+    id_receptor: 123456,    // SET YOUR OWN ID
   },
 
   timer: {                     // Expressed in minutes
