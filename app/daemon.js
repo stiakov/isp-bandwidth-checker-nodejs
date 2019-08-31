@@ -12,7 +12,7 @@ const check_ip = () => {
     const new_ip = array[1].client.ip;
 
     if (old_ip !== new_ip) {
-      let message = `Your IP has changed\nfrom <em>${old_ip}</em>\nto <b>${new_ip}</b>`;
+      const message = `Your IP has changed\nfrom <em>${old_ip}</em>\nto <b>${new_ip}</b>`;
       bot.send_news(message);
     }
   }
@@ -32,7 +32,7 @@ const check_bandwidth = (init_boot = false) => {
 
     // TESTING COMMANDS
     // const stdout = cli.run('echo $(date)');
-    // bot.send_news(date_time);
+    // bot.send_news(stdout);
     check_ip();
 
   }, rand_timeout);
@@ -42,10 +42,8 @@ const check_bandwidth = (init_boot = false) => {
 const start = () => {
   try {
     console.log(set.daemon_str);
-    const time_interval = set.timer.random_generator(set.timer.interval);
     check_bandwidth(true);
-    setInterval(check_bandwidth, time_interval);
-
+    setInterval(check_bandwidth, set.timer.interval);
   } catch (error) {
     cli.log_errors(error);
   }

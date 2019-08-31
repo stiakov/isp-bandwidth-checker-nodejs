@@ -12,12 +12,12 @@ const settings = {
 
   bot: {
     token: 'USE:YOUR:OWN:BOT:TOKEN',
-    id_receptor: 123456,    // SET YOUR OWN ID
+    id_receptor: 123456789,    // SET YOUR OWN ID
   },
 
   timer: {                     // Expressed in minutes
-    allow_random: true,        // If it's false, random_margin will be zero by default
-    interval: 8,
+    allow_random: false,        // If it's false, random_margin will be zero by default
+    interval: 30,
     random_margin: 4,
     random_generator: (value) => {
       return Math.ceil(Math.random() * value) * 60000;

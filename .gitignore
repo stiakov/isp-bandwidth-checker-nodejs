@@ -4,4 +4,3 @@ package-lock.json
 /app/settings_copy.js
 .idea/
 /db.json
-/db/my_db.json
