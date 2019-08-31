@@ -12,18 +12,44 @@ const send_data = (dest_id, message, format = {parse_mode: 'HTML'}) => {
     });
 };
 
-my_bot.onText(/\/echo (.+)/, (msg) => {
+my_bot.onText(/(.+)/, (msg) => {
   console.log(msg);
   const chatId = msg.chat.id;
-  let message = '( ( ( echoes ) ) )';
+  let message = `Hey ${msg.chat.first_name}, check the commands with /options`;
   send_data(chatId, message);
 });
 
-my_bot.onText(/\/hey/, (msg) => {
-  const chatId = msg.chat.id;
-  const name = msg.chat.first_name;
-  const message = `Hey There ${name}!\nYour Telegram ID is: ${chatId}`;
-  send_data(chatId, message);
+my_bot.onText(/\/options/, (msg) => {
+  my_bot.sendMessage(msg.chat.id, "Welcome", {
+    "reply_markup": {
+      "keyboard": [['SpeedTest ⏱', "Which IP 🔍"], ["Show my ID ⏳", '💊']]
+    }
+  });
+});
+
+my_bot.on('message', (msg) => {
+  if (msg.text.toString().toLowerCase().includes('speedtest')) {
+    my_bot.sendMessage(msg.chat.id, "Starting test, wait a moment")
+      .then(success => {
+        console.log('speedtest is running');
+        let speed = cli.run(set.speedtest.simple);
+        send_data(msg.chat.id, speed);
+      });
+  }
+  if (msg.text.toString().toLowerCase().includes('ip')) {
+    let ip = db.getSample();
+    console.log('sending IP');
+    send_data(msg.chat.id, `Server IP: ${ip[0].client.ip}`);
+  }
+  if (msg.text.toString().toLowerCase().includes('id')) {
+    const chatId = msg.chat.id;
+    const message = `Your Telegram ID is: ${chatId}`;
+    send_data(msg.chat.id, message);
+  }
+  if (msg.text === '💊') {
+    const message = `Hey ${msg.chat.first_name}, don't forget to take your pills`;
+    send_data(msg.chat.id, message);
+  }
 });
 
 const bot = {
