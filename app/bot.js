@@ -34,7 +34,7 @@ my_bot.on('message', (msg) => {
     console.log('sending IP');
     send_data(msg.chat.id, `Server IP: ${ip[0].client.ip}`);
   }
-  if (msg.text.toString().toLowerCase().includes('id')) {
+  if (msg.text.toString().toLowerCase().includes('telegram')) {
     const chatId = msg.chat.id;
     const message = `Your Telegram ID is: ${chatId}`;
     send_data(msg.chat.id, message);
