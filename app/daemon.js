@@ -19,9 +19,13 @@ const check_ip = () => {
 };
 
 const check_bandwidth = (init_boot = false) => {
-  let rand_timeout = init_boot ? 0 : set.timer.random_margin;
+  let rand_timeout;
 
-  rand_timeout = set.timer.allow_random && !init_boot ? set.timer.random_generator(rand_timeout) : 0;
+  if (init_boot || !set.timer.allow_random) {
+    rand_timeout = 0;
+  } else {
+    rand_timeout = set.timer.random_generator(set.timer.random_margin);
+  }
 
   setTimeout(() => {
     // COMMENT THE BELOW COMMANDS FOR TESTING PURPOSES
@@ -43,7 +47,7 @@ const start = () => {
   try {
     console.log(set.daemon_str);
     check_bandwidth(true);
-    setInterval(check_bandwidth, set.timer.interval);
+    setInterval(check_bandwidth, set.timer.interval * 60000);
   } catch (error) {
     cli.log_errors(error);
   }
