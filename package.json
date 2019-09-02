@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js",
-    "daemon": "pm2 start index.js --name bwChecker"
+    "daemon": "pm2 start index.js --name bw_daemon"
   },
   "repository": {
     "type": "git",

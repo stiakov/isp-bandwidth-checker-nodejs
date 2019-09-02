@@ -19,7 +19,7 @@ const settings = {
     allow_random: false,        // If it's false, random_margin will be zero by default
     interval: 30,
     random_margin: 4,
-    random_generator: (value) => {
+    random_generator: value => {
       return Math.ceil(Math.random() * value) * 60000;
     }
   },
