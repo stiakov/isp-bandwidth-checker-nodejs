@@ -12,24 +12,17 @@ const send_data = (dest_id, message, format = {parse_mode: 'HTML'}) => {
     });
 };
 
-my_bot.onText(/(.+)/, (msg) => {
-  console.log(msg);
-  const chatId = msg.chat.id;
-  let message = `Hey ${msg.chat.first_name}, check the commands with /options`;
-  send_data(chatId, message);
-});
-
 my_bot.onText(/\/options/, (msg) => {
   my_bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
-      "keyboard": [['SpeedTest ⏱', "Which IP 🔍"], ["Show my ID ⏳", '💊']]
+      "keyboard": [['SpeedTest ⏱', "Which IP 🔍"], ["Telegram 🆔", '💊']]
     }
   });
 });
 
 my_bot.on('message', (msg) => {
   if (msg.text.toString().toLowerCase().includes('speedtest')) {
-    my_bot.sendMessage(msg.chat.id, "Starting test, wait a moment")
+    my_bot.sendMessage(msg.chat.id, "Running test, wait a moment")
       .then(success => {
         console.log('speedtest is running');
         let speed = cli.run(set.speedtest.simple);
