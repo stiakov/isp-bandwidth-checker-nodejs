@@ -21,6 +21,8 @@ my_bot.onText(/\/options/, (msg) => {
 });
 
 my_bot.on('message', (msg) => {
+  console.log(new Date(msg.date * 1000).toLocaleString();
+
   if (msg.text.toString().toLowerCase().includes('speedtest')) {
     my_bot.sendMessage(msg.chat.id, "Running test, wait a moment")
       .then(success => {
@@ -29,16 +31,19 @@ my_bot.on('message', (msg) => {
         send_data(msg.chat.id, speed);
       });
   }
+
   if (msg.text.toString().toLowerCase().includes('ip')) {
     let ip = db.getSample();
     console.log('sending IP');
     send_data(msg.chat.id, `Server IP: ${ip[0].client.ip}`);
   }
-  if (msg.text.toString().toLowerCase().includes('id')) {
+
+  if (msg.text.toString().toLowerCase().includes('telegram')) {
     const chatId = msg.chat.id;
     const message = `Your Telegram ID is: ${chatId}`;
     send_data(msg.chat.id, message);
   }
+
   if (msg.text === '💊') {
     const message = `Hey ${msg.chat.first_name}, don't forget to take your pills`;
     send_data(msg.chat.id, message);
