@@ -61,6 +61,7 @@ If you test it in a Windows environment, let me know your experience.
 * [X] Deploy on my own server.
 * [X] Implement a telegram bot to notify relevant changes in data.
 * [X] Make it accessible from the web.
+* [ ] Enhance its performance with concurrent threads.
 * [ ] Implement a GUI to visualize and explore the data collected.
 
 ---
