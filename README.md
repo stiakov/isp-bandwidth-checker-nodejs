@@ -1,6 +1,8 @@
-# Bandwidth Checker Daemon
+![](https://img.shields.io/badge/beta-functional-green?style=flat-square)
+![](https://img.shields.io/badge/platforms--tested-linux--64%20%7C%20osx--64-success?style=flat-square)
+# Network Checker Daemon
 
-It's a bandwidth monitor daemon built upon JS instructions, it's intended to run periodically and save the results in a json file.
+It's a bandwidth, IP tracker and a bot daemon that is monitoring the network peformance in a server, built upon JS instructions, it's intended to run periodically and save the results in a json file.
 
 It makes use of:
 
@@ -30,7 +32,7 @@ If you work with multiple projects and different development environments, I end
 
 ## Settings
 
-The *settings.js* module is offered to customize the arguments passed in the *index.js* functions, so you should customize the module to fits it to your needs.
+The *settings.js* module is offered to customize the arguments passed globally, so you should customize the module to fits it to your needs.
 
 ---
 
@@ -49,14 +51,15 @@ From the console:
 ## Issues
 
 Please help me tracking any issue that could appear, feel free to fork and send a pull request, comment, review, or report an issue on this repo.
-
+If you test it in a Windows environment, let me know your experience.
 ---
 
 ## To do
 
-* [ ] Implement a GUI to visualize and explore the data collected.
-* [ ] Deploy on my own server and make it accessible from the web.
+* [X] Deploy on my own server.
 * [X] Implement a telegram bot to notify relevant changes in data.
+* [X] Make it accessible from the web.
+* [ ] Implement a GUI to visualize and explore the data collected.
 
 ---
 
