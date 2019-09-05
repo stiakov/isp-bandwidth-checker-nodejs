@@ -27,13 +27,13 @@ If you work with multiple projects and different development environments, I end
 
 * Install **[PM2](http://pm2.keymetrics.io/)** globally: `npm install -g pm2` 
 
-* Install **[LowDB](https://github.com/typicode/lowdb)** and the **[Node Telegram Bot Api](https://github.com/yagop/node-telegram-bot-api)**: Run `npm install` from the `Shell, it makes use of the *package.json* in the source directory, or if you prefer, follow the instructions from the provided link.
+* Install **[LowDB](https://github.com/typicode/lowdb)** and the **[Node Telegram Bot Api](https://github.com/yagop/node-telegram-bot-api)**: Run `npm install` from the `Shell`, it makes use of the *package.json* in the source directory, or if you prefer, follow the instructions from the provided link.
 
 ---
 
 ## Settings
 
-The *settings.js* module is offered to customize the arguments passed globally, so you should customize the module to fits it to your needs.
+The *settings.js* module is offered to customize the arguments passed globally, so you must customize the module to fits it to your needs.
 
 ---
 
