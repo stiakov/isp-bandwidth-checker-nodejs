@@ -24,9 +24,10 @@ If you work with multiple projects and different development environments, I end
 ## Installation
 
 * Install **[SpeedTest-cli](https://github.com/sivel/speedtest-cli)**: `pip install speedtest-cli` 
+
 * Install **[PM2](http://pm2.keymetrics.io/)** globally: `npm install -g pm2` 
 
-* Install **[LowDB](https://github.com/typicode/lowdb)**: Run `npm install` from the terminal, it makes use of the *package.json* in the source directory or if you prefer, follow the instructions from the provided link.
+* Install **[LowDB](https://github.com/typicode/lowdb)** and the **[Node Telegram Bot Api](https://github.com/yagop/node-telegram-bot-api)**: Run `npm install` from the `Shell, it makes use of the *package.json* in the source directory, or if you prefer, follow the instructions from the provided link.
 
 ---
 
@@ -63,6 +64,7 @@ If you test it in a Windows environment, let me know your experience.
 * [X] Make it accessible from the web.
 * [ ] Enhance its performance with concurrent threads.
 * [ ] Implement a GUI to visualize and explore the data collected.
+* [ ] Write a Shell script to ease the auto-installation.
 
 ---
 
