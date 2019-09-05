@@ -51,7 +51,9 @@ From the console:
 ## Issues
 
 Please help me tracking any issue that could appear, feel free to fork and send a pull request, comment, review, or report an issue on this repo.
+
 If you test it in a Windows environment, let me know your experience.
+
 ---
 
 ## To do
